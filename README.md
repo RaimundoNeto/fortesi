@@ -1,2 +1,5 @@
-# fortesi
-Software de Gerenciamento de Processos Jurídicos,
+# FORTESI - Software de Gerenciamento de Processos Jurídicos
+  
+    Uma das maiores dificuldades de um advogado é na parte de organização de toda a papelada e demanda de processo dos seus devidos clientes com isto surgiu à necessidade dos advogados em utilizar alguma ferramenta para organizar e gerenciar os seus processos e toda a papelada trabalhada.
+    O FORTESI informatiza e digitaliza toda a documentação física economizando o espaço, volume e tempo facilitando a busca e pesquisa sobre uma determinada documentação, tudo isto através de um alguns cliques, o advogado pode adicionar novos clientes, alterar ou excluir, montar uma agenda personalizando sobre seus trabalhos, o sistema apresenta uma fácil identificação dos seus ícones assim o usuário se sente mais seguro ao que esta fazendo mesmo sem conhecer inteiramente a ferramenta.
+    Cartilha dos advogados “As rotinas de um escritório de advocacia são muitas vezes trabalhosas, isso por que a burocracia é inerente ao judiciário Além disso, com o aumento do número de processos, consequentemente têm-se maiores dificuldades em gerenciá-los.”.
