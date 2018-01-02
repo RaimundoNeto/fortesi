@@ -1,0 +1,69 @@
+Na parte de LEMBRETES existem duas formas de ser feito;
+O primeiro método é com um pluggin chamado de quartz, que está disponivel pra baixar aqui no drop e também pode ser usado online, nesse caso será off mesmo, terá de ter a classe tarefa ou "lembrete" e a classe  "agenda".
+nesse link vai ser encontrado instruções de ultização desse pluggin detalhado... http://www.bau-de-dev.com/programacao/desvendando-o-quartz-hello-world
+támbém tem como realizar com o TimeTask do java mas n achei nada que pudesse ajudar a fazer esse processo á não ser colocar relógio, n seria útil, esse codigo so precisa ser adequado e implementado pro projeto
+
+------------------------
+
+na classe Tarefa
+
+ 
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
+ 
+/**
+ * Esta classe demonstra uma tarefa que ira ser invocada pelo Quartz
+ * Tem que implementar a interface Job do Quartz
+ */
+public class TarefaExemplo implements Job{
+ 
+/**
+ * Metodo que é executado quando a tarefa é invocada
+ */
+ public void execute(JobExecutionContext context)
+ throws JobExecutionException {
+ // Obviamente, aqui vai a lógica da tarefa a ser chamada, nesta caso, vai imprimir no console;
+   SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy – hh:mm:ss");
+   System.out.println("Rodou: " + dateFormat.format( new Date() ));
+ }
+ 
+}
+
+-------------------------------
+
+na classe Agenda
+
+ 
+import org.quartz.CronScheduleBuilder;
+import org.quartz.JobBuilder;
+import org.quartz.JobDetail;
+import org.quartz.Scheduler;
+import org.quartz.Trigger;
+import org.quartz.TriggerBuilder;
+import org.quartz.impl.StdSchedulerFactory;
+ 
+/**
+ * Esta é a classe que deve ser invocada e irá disparar a tarefa nos momentos
+ * determinados
+ *
+ */
+public class Agendador {
+ 
+    public static void inicia() throws Exception {
+        // Detalhes da tarefa
+        JobDetail job = JobBuilder.newJob(TarefaExemplo.class).withIdentity(
+                "tarefaAloMundo", "group1").build();
+        // Gatilho - ou seja, quando irá chamar, neste caso, a cada 5 segundos
+        Trigger trigger = TriggerBuilder.newTrigger().withIdentity(
+                "gatilhoAloMundo", "group1").withSchedule(
+                CronScheduleBuilder.cronSchedule("0/5 * * * * ?")).build();
+ 
+        // Agenda e voa lá!
+        Scheduler scheduler = new StdSchedulerFactory().getScheduler();
+        scheduler.start();
+        scheduler.scheduleJob(job, trigger);
+ 
+    }
+ 
+}

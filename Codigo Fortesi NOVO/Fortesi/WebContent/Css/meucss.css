@@ -1,0 +1,202 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* Margem do topo da tela*/
+body {
+  padding: 0px 13%;
+}
+form header {
+  margin: 0 0 20px 0; 
+}
+form header div {
+  font-size: 90%;
+  color: #999;
+}
+div > div > div > div> h1{
+	margin-top:03px;
+	font-size:34px;
+}
+form header h2 {
+  margin: 0 0 5px 0;
+}
+/*Formularios Cadastro e Processos*/
+/* Posição*/
+form > div {
+  clear: both;
+  overflow: hidden;
+  padding: 1px;
+  margin: 0 0 5px 10px;
+}
+/*Fim Posição*/
+
+form > div > fieldset > div > div {
+  margin: 0 0 5px 0;
+}
+/*Posição das legendas dos formularios*/
+form > div > label,
+legend {
+  height:10px;
+  width: 25%;
+  float: left;
+  padding-right: 10px;
+}
+/*Fim*/
+
+/*Botões dos formularios*/
+div > div > 
+input[type=button],
+input[type=submit],
+input[type=reset]
+{
+	margin-top:12px;
+	height:30px;
+	width:160px;
+	border-style:double;
+	border-radius: 10px/01px;
+	position:relative;
+	left:100px center;  
+	font-size:18px;
+    font-family:'Oswald';
+    background: #00bfff url("gradient.png") repeat-x;
+}
+/*Fim*/
+form > div > div,
+form > div > fieldset > div {
+  width: 75%;
+  float: right;
+}
+form > div > fieldset label {
+	font-size: 30%;
+}
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+textarea {
+	width: 100%;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+/*Tamanho dos campos*/
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password] {
+  width: 100%;
+}
+/*Fim*/
+
+/*Cor das bordas dos Formularios*/
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+textarea:focus {
+  outline: 0;
+  border-color: #4697e4;
+}
+/*Fim*/
+
+@media (max-width: 600px) {
+  form > div {
+    margin: 0 0 15px 0; 
+  }
+  form > div > label,
+  legend {
+	  width: 100%;
+    float: none;
+    margin: 0 0 5px 0;
+  }
+  form > div > div,
+  form > div > fieldset > div {
+    width: 100%;
+    float: none;
+  }
+  input[type=text],
+  input[type=email],
+  input[type=url],
+  input[type=password],
+  textarea,
+  select {
+    width: 100%; 
+  }
+}
+@media (min-width: 1200px) {
+  form > div > label,
+	legend {
+  	text-align: right;
+  }
+}
+
+/*Menu*/	
+/* NavBar DropDown Vertical*/
+.menu{
+list-style:none;
+border:1px ridge #c0c0c0;
+float:left;
+background: #333;
+width: 100%;
+position:fixed;
+width:150px;
+height:100%;
+font-size:18px;
+    font-family:'Oswald';
+}
+
+.menu li{
+position:relative;
+float:left;
+border-right:1px none #c0c0c0;
+padding: 5px 0 8px;
+
+}
+.menu li a{
+color:#00CED1; 
+text-decoration:none; 
+padding:5px 10px; 
+display:block;
+
+}
+
+/* Menus */
+.menu li  ul{
+position:absolute;
+top:25px;
+left:10px;
+background-color:#fff;
+display:none;
+} 
+ 
+.menu li a:hover{
+background:#00CED1;
+color:#fff;
+-moz-box-shadow:0 3px 10px 0 #CCC;
+-webkit-box-shadow:0 3px 10px 0 #ccc;
+text-shadow:0px 0px 5px #fff;
+
+}
+/* Movimento dos Sub-menus da NavBar*/
+.menu li:hover ul, .menu li.over ul{
+  display:block; 
+  position: relative;
+  left: 5px;
+  top: 1px;
+  z-index: 30;
+}
+
+/* Sub-menus */
+.menu li ul li{
+display:block;
+width:120px;
+padding:0 4px;
+color:#fff;
+}

@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding:0;
+}
+ /* Fix IE. Hide from IE Mac \*/
+* html ul li { float: left; }
+* html ul li a { height: 1%; }
+/* End *
+
+/* para garantir que estes elementos ocuparão toda a tela */
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+#corpologin{
+	background-image:url("../Imgs/telalogin.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100% ; 	
+	-webkit-background-size: 100%;
+    -o-background-size: 100%;
+    -khtml-background-size: 100%;
+    -moz-background-size: 100% 100%;
+}
+
+.centralizar{
+	 width: 200px; 
+     height: 150px; 
+     left: 50%; 
+     margin: -100px 0 0 -290px; 
+     padding:10px;
+     position: absolute; 
+     top: 57%;
+}
+#formularioLogin label.labelusuario{
+		font-size:19px;
+		font-family: 'Oswald';
+		position:absolute;
+	    left:35%;
+	   	padding:12px;
+	}
+#formularioLogin label.labelsenha{
+		font-size:18px;
+		font-family: 'Oswald';
+		position:absolute;
+	    left:30%;
+	   	padding:25px;
+	}
+
+#formularioLogin input.campoUsuario{
+	background-color:#eee;
+	position:absolute;
+    left:85px;
+    top:40px;
+    width:350px;
+    height:27px;
+    border-style:double;
+    border-radius: 10px;
+    font-size:18px;
+    font-family:'Oswald';
+}
+#formularioLogin input.campoSenha{
+	background-color:#eee;
+	position:absolute;
+    left:85px;
+    margin-top:43px;
+    width:350px;
+    height:27px;
+    border-style:double;
+    border-radius: 10px;
+    font-size:18px;
+    font-family:'Oswald';
+}
+
+#formularioLogin input.button_entrar{
+	border-style:double;
+	border-radius: 10px/01px;
+	position:absolute;
+	left:200px;
+	margin-top:46px;
+	width:109px;   
+	height:29px;
+	font-size:18px;
+    font-family:'Oswald';
+    background: #00bfff url("gradient.png") repeat-x;
+    box-shadow: 1px 1px 1px #999;
+    cursor:pointer;
+}
+
+#Bordalogin
+{
+    width:370px;
+    height:160px;
+   
+}
+
+/*fim do form login*/
+
+/*começo form página Inicial*/
+.teste{
+	background-image:url("../Imgs/planfundoinicial.jpg");
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+	-webkit-background-size: 100%;
+    -o-background-size: 100%;
+    -khtml-background-size: 100%;
+    -moz-background-size: 100% 100%;
+
+}
+#buscar{
+	margin-right: 5%;
+	margin-top: 1%;
+	float: right;
+}
+/*fim do form página Inicial*/
+
+/*começo form cad cliente*/
+input#cEmail,#txtData,#csexo,#cestadocivil{
+	
+}
+.tabelacadcliente{
+	border-spacing: 0px;
+}
+
+/*começo tebela listarCliente*/
+#tablelistarclientes{
+	border: 2px solid;
+	border-collapse: ridge;
+	width: 82%;
+	background: #87CEFA;
+	border: 2px solid #00BFFF;
+	float: right;
+	
+}
+#tablelistarclientesdois{
+	border: 2px solid;
+	border-collapse: ridge;
+	width: 88%;
+	background: #87CEFA;
+	border: 2px solid #00BFFF;
+	float: right;
+}
+#tablelistarclientes, td{
+	border-collapse: ridge;
+	border: 1px solid #00BFFF;
+}
+#centralizarh3{
+	text-align: center;
+}
+#centrotd{
+	text-align: center;
+}
+/*Padrão para todos formulários*/
+.fieldsetFormularios{
+	 width: 955px; 
+     height: 350px; 
+     left: 63%; 
+     margin: -30px 0 0 -610px; 
+     padding:-10px;
+     position:absolute; 
+     top: 30%;
+     font-family:'Oswald';
+     
+}
+
+.fieldsetFormularios label{
+
+    left:19px;
+    
+}
+/* Inicio dos Botões do form Cliente*/
+.divbotaoFormulario{
+	position: absolute;
+	left: 62%;
+	top: 590px;
+}
+
+.divbotaoFormulario input{
+	font-size:16px;
+	font-family:'Oswald';
+	width:140px;
+	height:64px;
+}
+.title1{
+	background:#444;
+}
+/* Fim dos Botões do form Cliente*/
+
+/*Formulário cad processo*/
+#botaocadprocesso{
+	position: absolute;
+	left: 62%;
+	top: 590px;
+	
+}
+#botaocadprocesso input{
+	font-size:16px;
+	font-family:'Oswald';
+	width:140px;
+	height:24px;
+}
+#Formulariocadprocesso {
+	 width: 955px; 
+     height: 350px; 
+     left: 63%; 
+     margin: -30px 0 0 -610px; 
+     padding:-10px;
+     position: absolute; 
+     top: 30%;
+      /*width: 870px; 
+     height: 250px; 
+     left: 63%; 
+     margin: -30px 0 0 -610px; 
+     padding:-10px;
+     position: absolute; 
+     top: 30%;*/
+}
+
+/* Propriedades do Backgroud*/
+.bodyformularios{
+background-image: url("../Imgs/imgfundojuridico.jpg");
+background-repeat: no-repeat;
+background-size: 100%;
+-webkit-background-size: 100%;
+-o-background-size: 100%;
+-khtml-background-size: 100%;
+-moz-background-size: 100% 100%;
+}
+/*Começo Formulário administrador*/
+#fieldsetformadm{
+	 width: 443px; 
+     height: 170px; 
+     left: 67%; 
+     margin: -30px 0 0 -410px; 
+     padding:-10px;
+     position: absolute; 
+     top: 45%;
+     
+}
+#fieldsetNovoUsuario{
+	 width: 443px; 
+     height: 170px; 
+     left: 67%; 
+     margin: -30px 0 0 -410px; 
+     padding:-10px;
+     position: absolute; 
+     top: 45%;
+}
+/*#fieldsetformadm h3{
+	text-align: center;
+} */
+
+.centralizarbotaoformadm{
+	position: absolute;
+	left: 51%;
+	top: 390px;
+}
+.centralizarbotaoformadm input[type=submit]{
+	width: 150px;
+}
+#fundoformadm{
+	background-image: url("../Imgs/planfundoadm.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	
+}
+/*Começo formularioadm erro*/
+#fundoformadmerro{
+	background-image: url("../Imgs/planfundoadm.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+#fieldsetformadmerro{
+	 width: 443px; 
+     height: 170px; 
+     left: 67%; 
+     margin: -30px 0 0 -410px; 
+     padding:-10px;
+     position: absolute; 
+     top: 45%;
+     
+}
+/*#fieldsetformadmerro h3{
+	text-align: center;
+}*/
+#divspan{
+	position:relative;
+	color: red;
+	left: 49%;
+	top: 380px;
+	font-stylus:'Osvald';
+}
+/*formulario cadastrar novo usuario*/
+#centralizarcadnusuario{
+	 width: 200px; 
+     height: 150px; 
+     left: 50%; 
+     margin: -100px 0 0 -290px; 
+     padding:10px;
+     position: absolute; 
+     top: 50%;
+}
+#centralizarbotaoformadmerro{
+	position: absolute;
+	left: 49%;
+	top: 370px;
+	font-stylus:'Osvald';
+	color: red;
+}
+/*TESTANDO RESPONSIVIDADE*/

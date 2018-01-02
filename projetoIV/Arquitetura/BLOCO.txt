@@ -1,0 +1,38 @@
+O padrão arquitetural Model-View-Controller (MVC) é uma forma de quebrar uma aplicação, ou até mesmo um pedaço da interface de uma aplicação, em três partes: o modelo, a visão e o controlador.
+
+O MVC inicialmente foi desenvolvido no intuito de mapear o método tradicional de entrada, processamento, e saída que os diversos programas baseados em GUI utilizavam. No padrão MVC, teríamos então o mapeamento de cada uma dessas três partes para o padrão MVC conforme ilustra a imagem abaixo:
+
+Mapeamento das três partes de uma aplicação para o MVC
+Figura 1: Mapeamento das três partes de uma aplicação para o MVC.
+
+
+
+A figura abaixo demonstra que a entrada do usuário, a modelagem do mundo externo e o feedback visual para o usuário são separados e gerenciados pelos objetos Modelo (Model), Visão (View) e Controlador (Controller).
+
+
+Figura 2: Objetos utilizados no MVC e suas interações.
+Explicando cada um dos objetos do padrão MVC tem-se primeiramente o controlador (Controller) que interpreta as entradas do mouse ou do teclado enviado pelo usuário e mapeia essas ações do usuário em comandos que são enviados para o modelo (Model) e/ou para a janela de visualização (View) para efetuar a alteração apropriada. Por sua vez o modelo (Model) gerencia um ou mais elementos de dados, responde a perguntas sobre o seu estado e responde a instruções para mudar de estado. O modelo sabe o que o aplicativo quer fazer e é a principal estrutura computacional da arquitetura, pois é ele quem modela o problema que está se tentando resolver. Por fim, a visão (View) gerencia a área retangular do display e é responsável por apresentar as informações para o usuário através de uma combinação de gráficos e textos. A visão não sabe nada sobre o que a aplicação está atualmente fazendo, tudo que ela realmente faz é receber instruções do controle e informações do modelo e então exibir elas. A visão também se comunica de volta com o modelo e com o controlador para reportar o seu estado.
+Tão importante quanto explicar cada um dos objetos do padrão arquitetural MVC é explicar como é o seu fluxo tipicamente. Primeiramente o usuário interage com a interface (por exemplo, pressionando um botão) e o controlador gerenciar esse evento de entrada da interface do usuário. A interface do usuário é exibida pela visão (view), mas controlada pelo controlador. O controlador não tem nenhum conhecimento direto da View, ele apenas envia mensagens quando ela precisa de algo na tela atualizado. O controlador acessa o modelo, possivelmente atualizando ela de forma apropriada para as ações do usuário (por exemplo, o controlador solicita ao modelo que o carrinho de compras seja atualizado pelo modelo, pois o usuário incluiu um novo item). Isto normalmente causa uma alteração no estado do modelo tanto quanto nas informações. Por fim, a visão usa o modelo para gerar uma interface com o usuário apropriada. A visão recebe as informações do modelo. O modelo não tem conhecimento direto da visão. Ele apenas responde a requisições por informações de quem quer que seja e requisita por transformações nas informações feitas pelo controlador. Após isso, o controlador, como um gerenciador da interface do usuário, aguarda por mais interações do usuário, onde inicia novamente todo o ciclo.
+Portanto, a principal ideia do padrão arquitetural MVC é a separação dos conceitos - e do código. O MVC é como a clássica programação orientada a objetos, ou seja, criar objetos que escondem as suas informações e como elas são manipuladas e então apresentar apenas uma simples interface para o mundo. Entre as diversas vantagens do padrão MVC estão a possibilidade de reescrita da GUI ou do Controller sem alterar o nosso modelo, reutilização da GUI para diferentes aplicações com pouco esforço, facilidade na manutenção e adição de recursos, reaproveitamento de código, facilidade de manter o código sempre limpo, etc.
+Implementação do MVC
+Existem diversos frameworks para Java que implementam o padrão MVC e são muito utilizados em diversos projetos. Entre eles temos o JSF, Struts 1 e Struts 2, Spring MVC, Play Framework, Tapestry, e diversos outros. Existem diversos artigos e sites especializados que comparam as diferenças e vantagens entre esses diferentes frameworks. No entanto, o melhor é sempre verificar o que cada framework disponibiliza para os desenvolvedores e analisar se ele atende às nossas expectativas.
+Outras linguagens/plataformas também possuem frameworks que aderem ao padrão arquitetural MVC. Isso não inviabiliza que uma equipe crie o seu próprio framework, mas é preciso lembrar que um desenvolvedor novo precisa de tempo para aprender a desenvolver em determinada arquitetura e caso a empresa/projeto já utilize um framework bastante popular a curva de aprendizado será bem menor ou praticamente nula. Isso inclusive ajuda na contratação de novos funcionários, onde a empresa já pode exigir como pré-requisito conhecimentos neste framework.
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+Modelo (Model): O Modelo gerencia o comportamento e os dados do domínio da aplicação, responde as requisições sobre o seu estado (geralmente vindas da View) e responde às instruções para mudança de estado (geralmente vindas do Controle).O Modelo diz respeito ao gerenciamento da informação e ao comportamento da aplicação. O Modelo seria representação do conteúdo do banco de dados. O servidor de banco de dados constitui apenas a camada de persistência do Modelo. A View é responsável por apresentar as entidades de domínio ao usuário, constituindo a parte visível do sistema.
+Vista (View): Gerencia a saída gráfica e textual da parte da aplicação visível ao usuário. A camada de interface é responsável pela ligação do usuário com a aplicação. A interface com o usuário pode ser construída com qualquer linguagem para a Web (MVC não é exclusividade WEB. Aplicações desktop fazem uso disso) que possua mecanismos para conexão com um servidor Web e também possua característica de conexão com o banco de dados. Podem ser usadas as linguagens Java, PHP, ASP entre outras, nessa aplicação foi utilizada a linguagem JSP que é a linguagem para a Web vinda da linguagem Java da Sun Microservice.
+Controle (Control): O Controle interpreta as ações do usuário provenientes da View e as mapeia para chamadas do modelo, implementando as regras de negócio. O Controle interpreta as ações do usuário provenientes da View e comanda a execução das regras de negócio contidas no Modelo. As Regras de Negocio são classes que validam as entradas do usuário na interface para um dado assunto. Regras de negócio são bem mais genéricas. Exemplo: Toda transação bancária de credito está sujeita a xx % de IOF... Outro exemplo: A média de aprovação de um aluno será de 7.0 As regras de negocio devem ser capazes também de se conectarem ao banco de dados (Model) em busca de informações de são relevante para fazer a validação das informações vindas da interface do usuário. Além disso, o Controle comanda a View para que ela apresente adequadamente a informação ao usuário.

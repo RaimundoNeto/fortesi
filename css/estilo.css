@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding:0;
+}
+ 
+/* para garantir que estes elementos ocuparão toda a tela */
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+#corpologin{
+	background-image: url("../Imgs/corpologin.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.centralizar{
+	 width: 200px; 
+     height: 150px; 
+     left: 50%; 
+     margin: -130px 0 0 -110px; 
+     padding:10px;
+     position: absolute; 
+     top: 50%;
+}
+#formularioLogin label.labelusuario{
+		position:absolute;
+	    left:15%;
+	   	padding: 10px;
+	}
+#formularioLogin label.labelsenha{
+		position:absolute;
+	    left:19%;
+	   	padding: 2px;
+	}
+
+#formularioLogin input.campoUsuario{
+	background-color:#98FB98;
+	position:absolute;
+    left:95px;
+    top:23px;
+    width:150px;
+}
+#formularioLogin input.campoSenha{
+	background-color:#98FB98;
+	position:absolute;
+    left:95px;
+    margin-top:2px;
+    width:150px;
+}
+
+#formularioLogin input.button_entrar{
+	border-style:groove;
+	position:absolute;
+	left:95px;
+	width: 150px;   
+}
+
+#Bordalogin
+{
+	background-image:url("../Imgs/fundologin.jpg");
+    width:250px;
+    height:120px;
+    border-style: groove;
+}
+
+/*fim do form login*/
+
+/*começo form página Inicial*/
+#centralizarpaginicial{
+	
+}
+
+.menu{
+list-style:none;
+border:1px dashed #c0c0c0;
+float:left;
+background: #00CED1;
+}
+.menu li{
+position:relative;
+float:left;
+border-right:1px solid #c0c0c0;
+}
+.menu li a{color:#333; text-decoration:none; padding:5px 10px; display:block;}
+ 
+.menu li a:hover{
+background:#333;
+color:#fff;
+-moz-box-shadow:0 3px 10px 0 #CCC;
+-webkit-box-shadow:0 3px 10px 0 #ccc;
+text-shadow:0px 0px 5px #fff;
+}
+.menu li  ul{
+position:absolute;
+top:25px;
+left:0;
+background-color:#fff;
+display:none;
+} 
+.menu li:hover ul, .menu li.over ul{display:block;}
+
+.menu li ul li{
+border:1px solid #c0c0c0;
+display:block;
+width:150px;
+}
+
+/*fim do form página Inicial*/
+
+/*começo form cad cliente*/
+input#cEmail,#txtData,#csexo,#cestadocivil{
+	
+}
+.tabelacadcliente{
+	border-spacing: 10px;
+}
+
+/*começo tebela listarCliente*/
+#tablelistarclientes{
+	border: 2px solid;
+	border-collapse: collapse;
+	width: 1000px;
+	background: #87CEFA;
+	border: 2px solid #00BFFF;
+	
+}
+#tablelistarclientes, td{
+	border-collapse: collapse;
+	border: 1px solid #00BFFF;
+}
+#centralizarh3{
+	text-align: center;
+}
+#centrotd{
+	text-align: center;
+}
+/*Padrão para todos formulários*/
+.fieldsetFormularios{
+	 width: 870px; 
+     height: 150px; 
+     left: 63%; 
+     margin: -30px 0 0 -610px; 
+     padding:-10px;
+     position: absolute; 
+     top: 30%;
+}
+.divbotaoFormulario{
+	position: absolute;
+	left: 32%;
+	top: 350px;
+}
+.divbotaoFormulario input{
+	width: 140px;
+}
+.bodyformularios{
+background-image: url("../Imgs/imgfundojuridico.jpg");
+background-repeat: no-repeat;
+background-size: 100%;
+}
+/*Começo Formulário administrador*/
+#fieldsetformadm{
+	 width: 443px; 
+     height: 170px; 
+     left: 63%; 
+     margin: -30px 0 0 -410px; 
+     padding:-10px;
+     position: absolute; 
+     top: 30%;
+}
+#fieldsetformadm h3{
+	text-align: center;
+} 
+.centralizarbotaoformadm{
+	position: absolute;
+	left: 39%;
+	top: 50px;
+}
+#fundoformadm{
+	background-image: url("../Imgs/planfundoadm.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+/*Começo formularioadm erro*/
+#fundoformadmerro{
+	background-image: url("../Imgs/planfundoadm.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+#fieldsetformadmerro{
+	width: 443px; 
+     height: 170px; 
+     left: 63%; 
+     margin: -30px 0 0 -410px; 
+     padding:-10px;
+     position: absolute; 
+     top: 30%;
+}
+#fieldsetformadmerro h3{
+	text-align: center;
+}
+#divspan{
+	position:relative;
+	color: red;
+	text-align: center;
+	top: 50px;
+}
+/*Formulário cad processo*/
+#botaocadprocesso{
+	position: absolute;
+	left: 35%;
+	top: 455px;
+}
+#botaocadprocesso input{
+	width: 140px;
+}
+#Formulariocadprocesso{
+	width: 870px; 
+     height: 250px; 
+     left: 63%; 
+     margin: -30px 0 0 -610px; 
+     padding:-10px;
+     position: absolute; 
+     top: 30%;
+}
